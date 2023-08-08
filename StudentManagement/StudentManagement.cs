@@ -169,11 +169,11 @@ namespace StudentManagement
 
             if (rbMale.Checked)
             {
-                studentToUpdate.Gender = "Nam";
+                studentToUpdate.Gender = "Male";
             }
             else if (rbFemale.Checked)
             {
-                studentToUpdate.Gender = "Nữ";
+                studentToUpdate.Gender = "Female";
             }
             else
             {
