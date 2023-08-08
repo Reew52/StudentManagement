@@ -12,10 +12,10 @@ namespace StudentManagement
         public string Name { get; set; }
         public int Age { get; set; }
         public string Gender { get; set; }
-        public string PhoneNumber { get; set; }
+        public int PhoneNumber { get; set; }
         public string Email { get; set; }
 
-        public Student(string studentID, string name, int age, string gender, string phoneNumber, string email)
+        public Student(string studentID, string name, int age, string gender, int phoneNumber, string email)
         {
             Id = studentID;
             Name = name;

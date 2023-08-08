@@ -2,7 +2,6 @@ C:\Users\Nguyen Cong Dung\Source\Repos\StudentManagement\StudentManagement\bin\D
 C:\Users\Nguyen Cong Dung\Source\Repos\StudentManagement\StudentManagement\bin\Debug\StudentManagement.exe
 C:\Users\Nguyen Cong Dung\Source\Repos\StudentManagement\StudentManagement\bin\Debug\StudentManagement.pdb
 C:\Users\Nguyen Cong Dung\Source\Repos\StudentManagement\StudentManagement\obj\Debug\StudentManagement.csproj.AssemblyReference.cache
-C:\Users\Nguyen Cong Dung\Source\Repos\StudentManagement\StudentManagement\obj\Debug\StudentManagement.csproj.SuggestedBindingRedirects.cache
 C:\Users\Nguyen Cong Dung\Source\Repos\StudentManagement\StudentManagement\obj\Debug\StudentManagement.loginForm.resources
 C:\Users\Nguyen Cong Dung\Source\Repos\StudentManagement\StudentManagement\obj\Debug\StudentManagement.Properties.Resources.resources
 C:\Users\Nguyen Cong Dung\Source\Repos\StudentManagement\StudentManagement\obj\Debug\StudentManagement.studentManagementForm.resources

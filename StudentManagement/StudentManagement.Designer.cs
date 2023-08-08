@@ -44,17 +44,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtAge = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btAdd = new System.Windows.Forms.Button();
             this.btEdit = new System.Windows.Forms.Button();
             this.btRefreshInput = new System.Windows.Forms.Button();
             this.btDelete = new System.Windows.Forms.Button();
             this.btLogout = new System.Windows.Forms.Button();
+            this.rbMale = new System.Windows.Forms.RadioButton();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudent)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +85,7 @@
             this.dgvStudent.Size = new System.Drawing.Size(807, 150);
             this.dgvStudent.TabIndex = 1;
             this.dgvStudent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgvStudent.SelectionChanged += new System.EventHandler(this.dgvStudent_SelectionChanged);
             // 
             // ID
             // 
@@ -199,47 +201,40 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Phone Number";
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Location = new System.Drawing.Point(341, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(141, 22);
-            this.textBox1.TabIndex = 10;
+            this.txtId.Location = new System.Drawing.Point(341, 66);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(141, 22);
+            this.txtId.TabIndex = 10;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(341, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 22);
-            this.textBox2.TabIndex = 11;
+            this.txtName.Location = new System.Drawing.Point(341, 101);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(141, 22);
+            this.txtName.TabIndex = 11;
             // 
-            // textBox3
+            // txtAge
             // 
-            this.textBox3.Location = new System.Drawing.Point(341, 137);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 22);
-            this.textBox3.TabIndex = 12;
+            this.txtAge.Location = new System.Drawing.Point(341, 137);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(141, 22);
+            this.txtAge.TabIndex = 12;
             // 
-            // textBox4
+            // txtPhoneNumber
             // 
-            this.textBox4.Location = new System.Drawing.Point(341, 205);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(141, 22);
-            this.textBox4.TabIndex = 13;
+            this.txtPhoneNumber.Location = new System.Drawing.Point(341, 205);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(141, 22);
+            this.txtPhoneNumber.TabIndex = 13;
             // 
-            // textBox5
+            // txtEmail
             // 
-            this.textBox5.Location = new System.Drawing.Point(341, 172);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(141, 22);
-            this.textBox5.TabIndex = 14;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(341, 247);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(141, 22);
-            this.textBox6.TabIndex = 15;
+            this.txtEmail.Location = new System.Drawing.Point(341, 247);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(141, 22);
+            this.txtEmail.TabIndex = 15;
             // 
             // btAdd
             // 
@@ -265,7 +260,7 @@
             // 
             this.btRefreshInput.Location = new System.Drawing.Point(594, 143);
             this.btRefreshInput.Name = "btRefreshInput";
-            this.btRefreshInput.Size = new System.Drawing.Size(75, 23);
+            this.btRefreshInput.Size = new System.Drawing.Size(107, 23);
             this.btRefreshInput.TabIndex = 18;
             this.btRefreshInput.Text = "Refresh Input";
             this.btRefreshInput.UseVisualStyleBackColor = true;
@@ -291,22 +286,46 @@
             this.btLogout.UseVisualStyleBackColor = true;
             this.btLogout.Click += new System.EventHandler(this.btLogout_Click);
             // 
+            // rbMale
+            // 
+            this.rbMale.AutoSize = true;
+            this.rbMale.Location = new System.Drawing.Point(338, 174);
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Size = new System.Drawing.Size(58, 20);
+            this.rbMale.TabIndex = 21;
+            this.rbMale.TabStop = true;
+            this.rbMale.Text = "Male";
+            this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.TextChanged += new System.EventHandler(this.ádas);
+            // 
+            // rbFemale
+            // 
+            this.rbFemale.AutoSize = true;
+            this.rbFemale.Location = new System.Drawing.Point(408, 174);
+            this.rbFemale.Name = "rbFemale";
+            this.rbFemale.Size = new System.Drawing.Size(74, 20);
+            this.rbFemale.TabIndex = 22;
+            this.rbFemale.TabStop = true;
+            this.rbFemale.Text = "Female";
+            this.rbFemale.UseVisualStyleBackColor = true;
+            // 
             // studentManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 523);
+            this.Controls.Add(this.rbFemale);
+            this.Controls.Add(this.rbMale);
             this.Controls.Add(this.btLogout);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.btRefreshInput);
             this.Controls.Add(this.btEdit);
             this.Controls.Add(this.btAdd);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtPhoneNumber);
+            this.Controls.Add(this.txtAge);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -337,12 +356,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtAge;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btRefreshInput;
@@ -354,5 +372,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.RadioButton rbMale;
+        private System.Windows.Forms.RadioButton rbFemale;
     }
 }
